@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Zdjęcia do wzięcia</title>
+    <link rel="stylesheet" href="style.css" />
+    <script type="text/javascript" src="https://unpkg.com/webcam-easy/dist/webcam-easy.min.js"></script>
+      
+    
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="container disable">
+      <h1 class="heading">Zdjęcia do wzięcia</h2>
+      <div class="wrapper">
+        <div class="editor-panel">
+          <div class="filter">
+            <label for="" class="title">Efekty</label>
+            <div class="options">
+              <button id="brightness" class="active">Jasność</button>
+              <button id="saturation">Nasycenie</button>
+              <button id="inversion">Negatyw</button>
+              <button id="grayscale">Szarość</button>
+              <button id="sepia">Sepia</button>
+              <button id="opacity">Przezroczystość</button>
+            </div>
+            <div class="slider">
+              <div class="filter-info">
+                <p class="name">Jasność</p>
+                <p class="value">100%</p>
+              </div>
+              <input type="range" value="100" min="0" max="200" />
+            </div>
+          </div>
+          <div class="rotate">
+            <label class="title">Obrót</label>
+            <div class="options">
+              <button id="left"><i class="fa-solid fa-rotate-left"></i></button>
+              <button id="right">
+                <i class="fa-solid fa-rotate-right"></i>
+              </button>
+              <button id="horizontal">
+                <i class="bx bx-reflect-vertical"></i>
+              </button>
+              <button id="vertical">
+                <i class="bx bx-reflect-horizontal"></i>
+              </button>
+              
+            </div>
+          </div>
+        </div>
+       
+        <div class="preview-img">
+          
+          <img id="placeholderimage" src="placeholder2.svg" alt="preview-img" />
+          
+        </div>
+      </div>
+      <div class="controls">
+        <button class="reset-filter">Resetuj</button>
+        <div class="row">
+          <input type="file" class="file-input" accept="image/*" hidden />
+          <button class="choose-img">Wybierz zdjęcie</button>
+          <button class="camera" id="start-camera">Obraz z kamery</button>
+          <button class="save-img">Zapisz zdjęcie</button>
+        </div>
+      </div>
+      <canvas id="canvas" width="320" height="240"></canvas>
+    </div>
+    <script src="patrzenie.js"></script>
+    <script src="zinservice.js"></script>
+  </body>
+</html>
