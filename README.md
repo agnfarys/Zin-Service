@@ -4,7 +4,7 @@ Upload your picture and apply one of six filters or 2D transform effects.
 
 <div align="center">
   <kbd>
-    <img src="https://imgur.com/1iOc93m" />
+    <img src="page.png" />
   </kbd>
 </div>
 
